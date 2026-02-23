@@ -171,9 +171,9 @@ Minimum:
 
 ------------------------------------------------------------------------
 
-# 🎁 Optional Bonus
+# 🎁 Bonus
 
-Frontend SPA (React / Vue / Svelte) consuming the API.
+Frontend SPA (React/Nextjs) consuming the API.
 
 ------------------------------------------------------------------------
 
@@ -181,6 +181,6 @@ Frontend SPA (React / Vue / Svelte) consuming the API.
 
 Submit:
 
--   Source code
+-   A fork with the source code
 -   Tests
 -   README with setup instructions
