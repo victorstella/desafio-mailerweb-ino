@@ -1,4 +1,4 @@
-# 🧪 Backend Coding Test -- Meeting Room Booking API
+# 🧪 Coding Test -- Meeting Room Booking API
 
 ------------------------------------------------------------------------
 
