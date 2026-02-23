@@ -4,7 +4,6 @@
 
 # 📌 Executive Summary
 
-**Role Level:** Mid/Pleno\
 **Language:** Python 3.10+\
 **Framework:** Your choice (FastAPI, Flask, Django, etc.)\
 **Database:** Your choice (SQLite allowed; PostgreSQL recommended for
