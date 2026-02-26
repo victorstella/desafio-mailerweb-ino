@@ -46,11 +46,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     'rest_framework',
     'rooms',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -137,3 +139,13 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 20,
 }
+
+# CORS settings: during development allow frontend dev server to access the API.
+if DEBUG:
+    # Accept requests from any origin when DEBUG is True (development only).
+    CORS_ALLOW_ALL_ORIGINS = True
+else:
+    # In production, explicitly set allowed origins (adjust as needed).
+    CORS_ALLOWED_ORIGINS = [
+        'http://localhost:5173',
+    ]

@@ -25,10 +25,22 @@ class RoomListCreateView(generics.ListCreateAPIView):
         return [permissions.AllowAny()]
 
 
-class BookingCreateView(APIView):
-    permission_classes = [permissions.IsAuthenticated]
+class BookingListCreateView(APIView):
+    """Lista reservas da sala (GET, pública) e cria reservas (POST, autenticado)."""
 
-    """Cria uma reserva para a sala especificada, validando sobreposição."""
+    def get_permissions(self):
+        # GET: allow anyone; POST: require authentication
+        if self.request.method == 'POST':
+            return [permissions.IsAuthenticated()]
+        return [permissions.AllowAny()]
+
+    def get(self, request, room_id):
+        room = get_object_or_404(Room, pk=room_id)
+        # list active bookings by default
+        qs = room.bookings.order_by('start_at')
+        serializer = BookingSerializer(qs, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
     def post(self, request, room_id):
         room = get_object_or_404(Room, pk=room_id)
         serializer = BookingSerializer(data=request.data, context={'room': room})
