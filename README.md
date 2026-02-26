@@ -186,7 +186,7 @@ Submit:
 
 ------------------------------------------------------------------------
 
-Setup Instructions
+# Setup Instructions
 
 Clone the project  and navigate to meeting_room and install all backend (Django) dependencies
 - ```$ python -m venv .venv```
@@ -204,6 +204,7 @@ In a new terminal, navigate to the frontend folder, install all dependencies and
 - ```$ npm install```
 - ```$ npm run dev```
 
-To run tests
+## To run tests
+
 - ```$ source .venv/bin/activate```
 - ```$ pytest -q```
