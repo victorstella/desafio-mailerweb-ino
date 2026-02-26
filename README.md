@@ -183,3 +183,27 @@ Submit:
 -   A fork with the source code
 -   Tests
 -   README with setup instructions
+
+------------------------------------------------------------------------
+
+Setup Instructions
+
+Clone the project  and navigate to meeting_room and install all backend (Django) dependencies
+- ```$ python -m venv .venv```
+- ```$ source .venv/bin/activate```
+- ```$ python -m pip install -r ../requirements.txt```
+
+Configure token for development environment following the example
+- ```$ cp .env.example .env```
+
+Run migrations and initialize the Django server (port 8000)
+- ```$ python manage.py migrate```
+- ```$ python manage.py runserver 0.0.0.0:8000```
+
+In a new terminal, navigate to the frontend folder, install all dependencies and run server at http://localhost:5173
+- ```$ npm install```
+- ```$ npm run dev```
+
+To run tests
+- ```$ source .venv/bin/activate```
+- ```$ pytest -q```
