@@ -1,0 +1,43 @@
+# Environment files
+meeting_room/.env
+*.env
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python bytecode
+__pycache__/
+**/__pycache__/
+*.py[cod]
+
+# Pytest cache
+.pytest_cache/
+meeting_room/.pytest_cache/
+
+# SQLite DB
+*.sqlite3
+db.sqlite3
+db.sqlite3-journal
+
+# Django
+*.log
+
+# IDEs/editor
+.vscode/
+.idea/
+
+# Coverage
+.coverage
+.coverage.*
+htmlcov/
+
+# OS files
+.DS_Store
+
+# Distribution/build
+build/
+dist/
+*.egg-info/
